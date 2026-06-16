@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Moti Music</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Moti Music 
+</div>
+
+<nav>
+<a href="#" id="homeLink">Home</a>
+<a href="#" id="playlistLink">Playlist</a>
+<a href="#">Library</a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="left">
+
+<div class="album-hero" id="albumHero">
+<img
+id="albumCover"
+src="images/playlist.jpg"
+alt="playlist cover">
+
+<div>
+<span class="eyebrow" id="viewType">Music</span>
+<h1 id="viewTitle">Moti Music</h1>
+<p id="viewText">All your songs stay here. Open Playlist for Talha Anjum tracks.</p>
+</div>
+</div>
+
+<div class="section-title">
+<h2 id="listTitle">Trending Songs</h2>
+<span id="songCount">0 songs</span>
+</div>
+
+<div class="song-list">
+
+</div>
+
+</section>
+
+<section class="right">
+
+<div class="player">
+
+<img
+id="cover"
+src="images/cover1.jpg"
+alt="cover">
+
+<h3 id="songName">
+Select Song
+</h3>
+
+<div class="time">
+
+<span id="currentTime">
+0:00
+</span>
+
+<span id="duration">
+0:00
+</span>
+
+</div>
+
+<input
+type="range"
+id="progress"
+value="0">
+
+<div class="controls">
+
+<button id="prev">
+<i class="fas fa-backward"></i>
+</button>
+
+<button id="play">
+<i class="fas fa-play"></i>
+</button>
+
+<button id="next">
+<i class="fas fa-forward"></i>
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

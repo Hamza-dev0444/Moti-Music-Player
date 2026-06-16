@@ -1,0 +1,290 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+min-height:100vh;
+background:
+radial-gradient(circle at 12% 10%,rgba(48,199,104,.28),transparent 30%),
+radial-gradient(circle at 88% 18%,rgba(133,214,115,.16),transparent 26%),
+linear-gradient(135deg,#10251b 0%,#18221f 46%,#173624 100%);
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:linear-gradient(90deg,rgba(20,63,39,.92),rgba(28,39,34,.88));
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+backdrop-filter:blur(16px);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#1DB954;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#55f08a;
+}
+
+nav a.active{
+color:#8cffad;
+font-weight:700;
+}
+
+main{
+display:flex;
+padding:30px;
+gap:30px;
+}
+
+.left{
+flex:1;
+}
+
+.right{
+width:400px;
+}
+
+.album-hero{
+display:flex;
+align-items:center;
+gap:24px;
+padding:26px;
+margin-bottom:24px;
+border-radius:18px;
+background:
+linear-gradient(135deg,rgba(69,153,88,.78),rgba(28,52,41,.84)),
+url("images/playlist.jpg");
+background-size:cover;
+background-position:center;
+box-shadow:0 18px 45px rgba(0,0,0,.28);
+border:1px solid rgba(212,255,219,.18);
+}
+
+.album-hero img{
+width:150px;
+height:150px;
+object-fit:cover;
+border-radius:14px;
+box-shadow:0 16px 32px rgba(0,0,0,.35);
+}
+
+.eyebrow{
+display:block;
+margin-bottom:8px;
+font-size:13px;
+font-weight:700;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:#d7ffdf;
+}
+
+.album-hero h1{
+font-size:48px;
+line-height:1;
+margin-bottom:12px;
+}
+
+.album-hero p{
+max-width:520px;
+color:#e3f8e8;
+font-size:16px;
+}
+
+.section-title{
+display:flex;
+align-items:end;
+justify-content:space-between;
+gap:16px;
+margin-bottom:16px;
+}
+
+.section-title h2{
+font-size:28px;
+}
+
+.section-title span{
+color:#c8e7d0;
+font-size:14px;
+}
+
+.player{
+background:linear-gradient(160deg,rgba(32,45,39,.96),rgba(28,90,50,.9));
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 18px 45px rgba(0,0,0,.35);
+border:1px solid rgba(85,240,138,.18);
+}
+.player img{
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+
+
+
+.rotate{
+animation:spin 6s linear infinite;
+}
+
+@keyframes spin{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+
+
+
+.song{
+background:rgba(32,45,39,.78);
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+cursor:pointer;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+
+transition:.3s;
+border:1px solid rgba(255,255,255,.06);
+box-shadow:0 12px 28px rgba(0,0,0,.14);
+}
+
+.song:hover{
+background:linear-gradient(90deg,#1DB954,#118c43);
+transform:translateY(-2px);
+}
+
+.song.active{
+background:linear-gradient(90deg,#1DB954,#0f6f35);
+box-shadow:0 12px 28px rgba(29,185,84,.22);
+}
+
+.song-info{
+display:flex;
+align-items:center;
+gap:12px;
+min-width:0;
+}
+
+.song-info img{
+width:54px;
+height:54px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.song-info span{
+display:block;
+font-weight:600;
+line-height:1.3;
+}
+
+.song-info small{
+display:block;
+margin-top:4px;
+color:#c3d8ca;
+font-size:13px;
+}
+
+
+.controls{
+margin-top:20px;
+}
+
+.controls button{
+
+width:60px;
+height:60px;
+
+border:none;
+border-radius:50%;
+
+background:linear-gradient(135deg,#1DB954,#0a7f38);
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+margin:0 10px;
+box-shadow:0 10px 24px rgba(29,185,84,.25);
+transition:.3s;
+}
+
+.controls button:hover{
+transform:scale(1.06);
+background:linear-gradient(135deg,#55f08a,#13a849);
+}
+
+#progress{
+width:100%;
+margin-top:20px;
+cursor:pointer;
+accent-color:#1DB954;
+}
+@media(max-width:768px){
+
+header{
+padding:18px 22px;
+flex-direction:column;
+gap:12px;
+}
+
+nav a{
+margin:0 8px;
+}
+
+main{
+flex-direction:column;
+padding:22px;
+}
+
+.album-hero{
+align-items:flex-start;
+padding:20px;
+gap:16px;
+}
+
+.album-hero img{
+width:96px;
+height:96px;
+}
+
+.album-hero h1{
+font-size:34px;
+}
+
+.right{
+width:100%;
+}
+
+}
